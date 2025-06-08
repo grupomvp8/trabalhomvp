@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (ctaButton) {
     ctaButton.addEventListener("click", () => {
-      window.location.href = "teste.html";
+      window.location.href = "./teste-gratuito/teste.html";
     });
   }
 });
