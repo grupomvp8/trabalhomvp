@@ -43,7 +43,7 @@
       background-color: #fffaf3;
       padding: 10px 0;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.242);
       position: absolute;
       top: 40px;
       left: 0;
@@ -78,26 +78,24 @@
     }
 
     .sound-controls {
+      justify-items: center;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
       max-width: 1000px;
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
-    .sound-card {
-      background-color: #fffaf6;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .sound-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
+    .sound-icon {
+      align-self: center;
+      width: 50%;
+      height: 70%;
+      cursor: pointer;
+      margin: 10px;
+      transition: opacity 0.3s ease;
+      opacity: 0.5;
+        }
 
     .sound-button {
       background-color: #5b3e2b;
@@ -235,18 +233,13 @@
 
   <!-- CARTÕES DE SOM -->
   <div class="sound-controls">
-    <div class="sound-card">
-      <h3>🎵 Pássaros</h3>
-      <button class="sound-button" onclick="toggleSound('passaros')">▶️ Tocar / Parar</button>
-    </div>
-    <div class="sound-card">
-      <h3>🌧️ Chuva</h3>
-      <button class="sound-button" onclick="toggleSound('chuva')">▶️ Tocar / Parar</button>
-    </div>
-    <div class="sound-card">
-      <h3>🌊 Mar</h3>
-      <button class="sound-button" onclick="toggleSound('mar')">▶️ Tocar / Parar</button>
-    </div>
+    <img class="sound-icon" src="img/chuva.png" data-som="sons/chuva.mp3" alt="Chuva">
+    <img class="sound-icon" src="img/passaros.png" data-som="sons/passaros.mp3" alt="Pássaros">
+    <img class="sound-icon" src="img/mar.png" data-som="sons/mar.mp3" alt="Mar">
+    <img class="sound-icon" src="img/fogueira.png" data-som="sons/fogueira.mp3" alt="Fogueira">
+    <img class="sound-icon" src="img/rio.png" data-som="sons/rio.mp3" alt="Rio">
+    <img class="sound-icon" src="img/musica.png" data-som="sons/musica.mp3" alt="Rio">
+
   </div>
 
   <!-- CÍRCULO DE RESPIRAÇÃO -->
@@ -322,6 +315,9 @@
         audio.currentTime = 0;
       }
     }
+
+
   </script>
+  <script src="sons.js"></script>
 </body>
 </html>
