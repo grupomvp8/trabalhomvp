@@ -152,23 +152,6 @@ form select:focus {
   background-color: #6d4c35;
 }
 
-/* BOTÃO FIXO */
-.subscribe-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #5b3e2b;
-  color: #fffaf3;
-  padding: 18px 28px;
-  font-size: 1.4em;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1001;
-}
 
 .subscribe-button:hover {
   background-color: #6d4c35;
