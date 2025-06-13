@@ -154,6 +154,28 @@ footer {
   transform: scale(1.05);
 }
 
+.subscriber-button {
+  position: fixed;
+  top: 20px;
+  right: 200px;
+  background-color: #5b3e2b;
+  color: #fffaf3;
+  padding: 18px 28px;
+  font-size: 1.4em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1001;
+}
+
+.subscriber-button:hover {
+  background-color: #6d4c35;
+  transform: scale(1.05);
+}
+
 @media (max-width: 600px) {
   .product-preview {
     padding: 30px 20px;

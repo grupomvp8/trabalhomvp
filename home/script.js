@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const subscribeButton = document.querySelector(".subscribe-button");
+  const subscriberButton = document.querySelector(".subscriber-button");
   const ctaButton = document.querySelector(".cta-button");
 
   if (subscribeButton) {
+    subscribeButton.addEventListener("click", () => {
+      window.location.href = "assine.html";
+    });
+  }
+
+  if (subscriberButton) {
     subscribeButton.addEventListener("click", () => {
       window.location.href = "assine.html";
     });
