@@ -61,3 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     return menuContainer;
+
+    /* Javascript do botao de assine */
+
+    
