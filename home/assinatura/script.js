@@ -20,6 +20,8 @@ document.getElementById('form-assinatura').addEventListener('submit', function (
   if (nome.split(' ').length < 2) {
     alert('Por favor, insira seu nome completo (nome e sobrenome).');
     return;
+  } else {
+    window.location.href = "../user e adm/sons-login/som.html";
   }
 
   // Simula envio do formulário, salvar dados, etc.
