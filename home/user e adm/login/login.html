@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área do Assinante - Studio Zen</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- Menu lateral -->
+  <aside class="sidebar">
+    <h2>Studio Zen</h2>
+    <nav>
+      <ul>
+        <li><a href="../sons-login/som.html">🎵 Sons</a></li>
+        <li><a href="../poesias-login/poesias.html" class="active">📜 Poesias</a></li>
+        <li><a href="../../ajuda/ajuda.html">❓ Ajuda</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <div class="main-content">
+    <header class="admin-header">
+      <div class="admin-user" id="adminUser">
+        <span>Olá, Camila 🌿</span>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="#">⚙️ Configurações</a>
+          <a href="#">🚪 Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="dashboard">
+      <h1>Bem-vindo ao seu espaço de paz ✨</h1>
+      <p>Escolha uma categoria no menu à esquerda e aproveite seu momento zen.</p>
+    </section>
+  </div>
+
+  <script>
+    // Alterna visibilidade do menu suspenso
+    document.getElementById('adminUser').addEventListener('click', () => {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    });
+
+    // Fecha dropdown ao clicar fora
+    document.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const adminUser = document.getElementById('adminUser');
+      if (!adminUser.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>

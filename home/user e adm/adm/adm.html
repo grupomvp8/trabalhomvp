@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administrador - Studio Zen</title>
+  <link rel="stylesheet" href="adm.css" />
+</head>
+<body>
+
+  <!-- Menu lateral -->
+  <aside class="sidebar">
+    <h2>Studio Zen</h2>
+    <nav>
+      <ul>
+        <li><a href="#">📊 Receita</a></li>
+        <li><a href="#">👥 Clientes</a></li>
+        <li><a href="#">📈 Relatórios</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <div class="main-content">
+    <header class="admin-header">
+      <div class="admin-user" id="adminUser">
+        <span>Administrador</span>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="#">Configurações</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="dashboard">
+      <h1>Bem-vindo ao Painel</h1>
+      <p>Selecione uma opção no menu à esquerda para começar.</p>
+    </section>
+  </div>
+
+  <script>
+    // Alterna visibilidade do menu suspenso do administrador
+    document.getElementById('adminUser').addEventListener('click', () => {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    });
+
+    // Fecha dropdown ao clicar fora
+    document.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const adminUser = document.getElementById('adminUser');
+      if (!adminUser.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>
