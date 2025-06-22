@@ -1,25 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Toggle do menu
-  const menuButton = document.querySelector(".menu-button");
-  const menuItems = document.querySelector(".menu-items");
+document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
 
-  if (menuButton && menuItems) {
-    menuButton.addEventListener("click", () => {
-      menuItems.style.display = menuItems.style.display === "flex" ? "none" : "flex";
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      // Verifica se o email e a senha atendem aos requisitos
+      if (email && senha.length >= 6) {
+        // Redireciona para o Google
+        window.location.href = "../sons-login/som.html";
+      } else {
+        alert("Preencha todos os campos corretamente.");
+      }
     });
-  }
-
-  // Validação do login (exemplo simples)
-  const loginForm = document.getElementById("login-form");
-  loginForm.addEventListener("submit", function (e) {
-    const email = document.getElementById("email").value.trim();
-    const senha = document.getElementById("senha").value.trim();
-
-    if (email === "" || senha.length < 6) {
-      alert("Preencha todos os campos corretamente.");
-      e.preventDefault();
-    } else {
-      alert("Login realizado com sucesso!"); // Substituir futuramente por redirecionamento
-    }
-  });
-});
