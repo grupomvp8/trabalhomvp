@@ -158,6 +158,27 @@ form select:focus {
   transform: scale(1.05);
 }
 
+.subscribe-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #A68A64;
+    color: #ffffff;
+    padding: 18px 28px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+}
+
+.subscribe-button:hover {
+    background-color: #6B4F3B;
+    transform: scale(1.05);
+}
 /* RODAPÉ */
 footer {
   margin-top: 60px;
@@ -176,4 +197,3 @@ footer {
     padding: 14px 20px;
     font-size: 1em;
   }
-}
