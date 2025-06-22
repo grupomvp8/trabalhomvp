@@ -127,6 +127,7 @@ header p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+
 .cta-button:hover,
 .content button:hover {
     background-color: #6B4F3B;
