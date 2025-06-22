@@ -16,15 +16,16 @@ body {
 }
 
 main.content {
-  margin-left: 220px;
+  margin-left: 230px;
   padding: 40px;
-  flex: 1;
+  flex: 1; /* ocupa o restante do espaço vertical */
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .sidebar {
-  width: 200px;
+  width: 230px;
   background-color: #fffaf3;
   padding: 20px;
   height: 100vh;
@@ -33,7 +34,10 @@ main.content {
   left: 0;
   top: 0;
   bottom: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
+
 
 .sidebar h2 {
   font-family: 'Morally Serif', serif;
@@ -59,13 +63,12 @@ main.content {
   transition: background-color 0.3s;
 }
 
-.sidebar ul li a.active,
 .sidebar ul li a:hover {
   background-color: #eee3d6;
 }
 
 .content {
-  margin-left: 220px;
+  margin-left: 230px;
   padding: 40px;
   flex-grow: 1;
 }
@@ -216,5 +219,5 @@ footer {
   color: #a3907d;
   font-size: 0.9em;
   background-color: transparent;
-  margin-left: 220px;
+  margin-left: 230px;
 }
