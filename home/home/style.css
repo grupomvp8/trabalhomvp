@@ -174,7 +174,7 @@ main {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.75) saturate(0.8);
+    
 }
 
 main::before {
