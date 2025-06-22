@@ -229,7 +229,7 @@ main::before {
     left: 5vw;
     transform: translateY(-50%);
     font: 400 1rem Helvetica, sans-serif;
-    color: #fffaf6;
+    color: #ffffff;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     opacity: 0;
     display: none;
