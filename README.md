@@ -29,3 +29,9 @@ Desconhecimento de técnicas de respiração.
 
 Tecnologias usadas:
 HTML5, CSS3, JavaScript
+
+Desenvolvimento:
+
+Camilly Nascimento
+Caio Zambonelli
+Gabriel Santos
