@@ -13,35 +13,59 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-.p1 {
-    line-height: 1.8; font-size: 1.25em; text-align: justify;
+  margin-left: 100px;
 }
 
+/* Conteúdo principal */
+main.content,
 .main1 {
-    margin-left: 250px; padding: 40px; max-width: 900px;
-}
-
-.h11 { 
-    font-family: 'Morally Serif', serif; font-size: 2em; margin-bottom: 20px; text-align: center;
-}
-
-.ul1 {
-    line-height: 1.8; font-size: 1.05em;
-}
-
-.footer1 {
-    margin-left: 250px; padding: 20px; text-align: center; font-size: 0.9em; color: #a3907d;
-}
-main.content {
   margin-left: 230px;
   padding: 40px;
-  flex: 1; /* ocupa o restante do espaço vertical */
+  max-width: 900px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
+.main1 {
+  margin-top: 20px; /* Espaço entre o botão e o conteúdo */
+}
+
+.p1 {
+  line-height: 1.8;
+  font-size: 1.25em;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.h11,
+.page-title h1 {
+  font-family: 'Morally Serif', serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: -100px;
+  font-weight: normal;
+}
+
+.ul1 {
+  line-height: 1.8;
+  font-size: 1.05em;
+}
+
+/* Rodapé */
+.footer1,
+footer {
+  margin-left: 230px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #a3907d;
+  background-color: transparent;
+}
+
+/* Sidebar */
 .sidebar {
   width: 230px;
   background-color: #fffaf3;
@@ -55,7 +79,6 @@ main.content {
   overflow-y: auto;
   box-sizing: border-box;
 }
-
 
 .sidebar h2 {
   font-family: 'Morally Serif', serif;
@@ -85,19 +108,18 @@ main.content {
   background-color: #eee3d6;
 }
 
-.content {
-  margin-left: 230px;
-  padding: 40px;
-  flex-grow: 1;
-}
-
+/* Cabeçalho do usuário */
 .user-header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 30px;
+  margin-left: 230px;
+  padding: 40px 40px 0 40px;
+  box-sizing: border-box;
+  margin-bottom: 30px; /* Espaço entre o botão e o conteúdo */
 }
 
+/* Botão do usuário */
 .user-menu {
   position: relative;
   cursor: pointer;
@@ -135,20 +157,4 @@ main.content {
 
 .user-menu .dropdown.show {
   display: block;
-}
-
-.page-title h1 {
-  font-family: 'Morally Serif', serif;
-  font-size: 2.4em;
-  margin-bottom: 10px;
-  margin-top: -50px;
-  font-weight: normal;
-  text-align: center;
-}
-
-.page-title p {
-  font-family: 'Georgia', serif;
-  font-size: 20px;
-  margin-bottom: 10px;
-  text-align: center;
 }
