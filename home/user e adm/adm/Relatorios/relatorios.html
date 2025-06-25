@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatórios - Studio Zen</title>
+  <link rel="stylesheet" href="relatorios.css" /> <!-- Importa o CSS principal -->
+</head>
+<body>
+
+  <!-- Menu lateral fixo -->
+  <aside class="sidebar">
+    <h2>Studio Zen</h2>
+    <nav>
+      <ul>
+        <!-- Links do menu -->
+        <li><a href="#">📊 Receita</a></li>
+        <li><a href="#">👥 Clientes</a></li>
+        <li><a href="relatorios.html">📈 Relatórios</a></li>
+        <li><a href="#">📜 Conteúdos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Área principal -->
+  <div class="main-content">
+
+    <!-- Cabeçalho com nome do usuário e dropdown -->
+    <header class="admin-header">
+      <div class="admin-user" id="adminUser">
+        <span>Administrador</span>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="#">Configurações</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conteúdo do dashboard de relatórios -->
+    <section class="dashboard">
+      <h1>Relatórios Mensais</h1>
+
+      <!-- Botões de filtro por período -->
+      <div class="report-filters">
+        <button class="report-btn">Últimos 7 dias</button>
+        <button class="report-btn">Últimos 30 dias</button>
+        <button class="report-btn">Ano atual</button>
+      </div>
+
+      <!-- Gráficos simulados (barra e pizza) -->
+      <div class="charts-grid">
+        <!-- Gráfico de barras -->
+        <div class="chart-box">
+          <h3>Consultas por Semana</h3>
+          <div class="bar-chart">
+            <div style="height: 70%" title="70%">Seg</div>
+            <div style="height: 50%" title="50%">Ter</div>
+            <div style="height: 60%" title="60%">Qua</div>
+            <div style="height: 80%" title="80%">Qui</div>
+            <div style="height: 90%" title="90%">Sex</div>
+            <div style="height: 40%" title="40%">Sáb</div>
+            <div style="height: 30%" title="30%">Dom</div>
+          </div>
+        </div>
+
+        <!-- Gráfico de pizza -->
+        <div class="chart-box">
+          <h3>Tipos de Atendimentos</h3>
+          <div class="pie-chart">
+            <div class="pie"></div>
+            <ul class="legend">
+              <li><span style="background:#a68a64;"></span>Massagem</li>
+              <li><span style="background:#6b4f3b;"></span>Acupuntura</li>
+              <li><span style="background:#d6c1b0;"></span>Yoga</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script do menu suspenso -->
+  <script>
+    // Mostra/oculta o menu do administrador
+    document.getElementById('adminUser').addEventListener('click', () => {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    });
+
+    // Fecha o dropdown se clicar fora dele
+    document.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const adminUser = document.getElementById('adminUser');
+      if (!adminUser.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
