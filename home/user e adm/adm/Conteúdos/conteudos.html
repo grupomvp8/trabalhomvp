@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conteúdos - Studio Zen</title>
+  <link rel="stylesheet" href="conteudos.css" />
+</head>
+<body>
+
+  <!-- Menu lateral -->
+  <aside class="sidebar">
+    <h2>Studio Zen</h2>
+    <nav>
+      <ul>
+        <li><a href="../Receitas/receitas.html">📊 Receita</a></li>
+        <li><a href="../Clientes/clientes.html">👥 Clientes</a></li>
+        <li><a href="../Relatorios/relatorios.html">📈 Relatórios</a></li>
+        <li><a href="#">📜 Conteúdos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Área principal -->
+  <div class="main-content">
+    <!-- Cabeçalho com usuário -->
+    <header class="admin-header">
+      <div class="admin-user" id="adminUser">
+        <span>Administrador</span>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="#">Configurações</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conteúdo de gerenciamento -->
+    <section class="dashboard">
+      <h1>Gerenciamento de Conteúdos</h1>
+
+      <!-- Botões de ação -->
+      <div class="report-filters">
+        <button class="report-btn" onclick="adicionarConteudo()">➕ Adicionar Conteúdo</button>
+      </div>
+
+      <!-- Lista de conteúdos existentes -->
+      <div class="content-list">
+        <div class="content-item">
+          <strong>Meditação Guiada para Iniciantes</strong>
+          <span>Tipo: Áudio</span>
+          <div>
+            <button class="edit-btn" onclick="editarConteudo(this)">Editar</button>
+            <button class="remove-btn" onclick="removerConteudo(this)">Remover</button>
+          </div>
+        </div>
+        <div class="content-item">
+          <strong>Exercício de Respiração Profunda</strong>
+          <span>Tipo: Vídeo</span>
+          <div>
+            <button class="edit-btn" onclick="editarConteudo(this)">Editar</button>
+            <button class="remove-btn" onclick="removerConteudo(this)">Remover</button>
+          </div>
+        </div>
+        <div class="content-item">
+          <strong>Artigo: Benefícios da Atenção Plena</strong>
+          <span>Tipo: Texto</span>
+          <div>
+            <button class="edit-btn" onclick="editarConteudo(this)">Editar</button>
+            <button class="remove-btn" onclick="removerConteudo(this)">Remover</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gráfico de distribuição de conteúdos -->
+      <div class="chart-box">
+        <h3>Distribuição de Conteúdos</h3>
+        <div class="bar-chart" id="graficoConteudo">
+          <div style="height: 70%" title="Áudio: 7">Áudio</div>
+          <div style="height: 50%" title="Vídeo: 5">Vídeo</div>
+          <div style="height: 30%" title="Texto: 3">Texto</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script do dropdown e ações -->
+  <script>
+    // Mostra/oculta menu suspenso do administrador
+    document.getElementById('adminUser').addEventListener('click', () => {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    });
+
+    // Fecha dropdown ao clicar fora
+    document.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const adminUser = document.getElementById('adminUser');
+      if (!adminUser.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+
+    // Remove conteúdo
+    function removerConteudo(botao) {
+      const item = botao.closest('.content-item');
+      item.remove();
+    }
+
+    // Edita nome do conteúdo
+    function editarConteudo(botao) {
+      const item = botao.closest('.content-item');
+      const titulo = item.querySelector('strong');
+      const novoTitulo = prompt("Digite o novo nome do conteúdo:", titulo.textContent);
+      if (novoTitulo !== null && novoTitulo.trim() !== '') {
+        titulo.textContent = novoTitulo.trim();
+      }
+    }
+
+    // Adiciona novo conteúdo com botões
+    function adicionarConteudo() {
+      const lista = document.querySelector('.content-list');
+      const novo = document.createElement('div');
+      novo.className = 'content-item';
+      novo.innerHTML = `
+        <strong>Novo Conteúdo Adicionado</strong>
+        <span>Tipo: Vídeo</span>
+        <div>
+          <button class="edit-btn" onclick="editarConteudo(this)">Editar</button>
+          <button class="remove-btn" onclick="removerConteudo(this)">Remover</button>
+        </div>
+      `;
+      lista.appendChild(novo);
+    }
+  </script>
+
+</body>
+</html>
