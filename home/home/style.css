@@ -16,7 +16,7 @@
 body {
     font-family: 'Georgia', serif;
     background-color: #f8f4f0;
-    color: #3d2e26;
+    color: #2E7D32;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ body {
 .menu-button {
     font-size: 1.8em;
     background: none;
-    color: #3d2e26;
+    color: #1A481F;
     border: none;
     cursor: pointer;
 }
@@ -62,7 +62,7 @@ body {
 .menu-items a {
     padding: 12px 20px;
     text-decoration: none;
-    color: #3d2e26;
+    color: #1A481F;
     transition: background-color 0.3s ease;
     font-size: 1em;
 }
@@ -81,13 +81,13 @@ header h1 {
     font-family:'Morally Serif', serif;
     font-size: 4em;
     font-weight: normal;
-    color: #3E2C23;
+    color: #246D2C;
 }
 
 header p {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #6a5546;
+    color: #246D2C;
 }
 
 /* PRODUCT PREVIEW */
@@ -105,19 +105,19 @@ header p {
 .product-preview h2 {
     font-size: 1.8em;
     margin-bottom: 15px;
-    color: #4e3b2c;
+    color: #1A481F;
 }
 
 .product-preview p {
     font-size: 1em;
-    color: #5c4c3d;
+    color: #1A481F;
     line-height: 1.6;
     margin-bottom: 30px;
 }
 
 .cta-button,
 .content button {
-    background-color: #A68A64;
+    background-color: #1a481fd5;
     color: #fff;
     border: none;
     padding: 14px 28px;
@@ -130,7 +130,7 @@ header p {
 
 .cta-button:hover,
 .content button:hover {
-    background-color: #6B4F3B;
+    background-color: #2F8F3A;
     transform: scale(1.05);
 }
 
@@ -138,7 +138,7 @@ header p {
 footer {
     margin-top: 60px;
     font-size: 0.9em;
-    color: #a3907d;
+    color: #045e0fc4;
 }
 
 /* BOTÃO ASSINE FIXO */
@@ -146,7 +146,7 @@ footer {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #A68A64;
+    background-color: #1a481fd5;
     color: #ffffff;
     padding: 18px 28px;
     font-size: 1.4em;
@@ -160,7 +160,7 @@ footer {
 }
 
 .subscribe-button:hover {
-    background-color: #6B4F3B;
+    background-color: #2F8F3A;
     transform: scale(1.05);
 }
 
@@ -276,8 +276,8 @@ main::before {
 
 .nav .btn {
     background-color: #D8CAB8;
-    color: #3E2C23;
-    border: 2px solid #A68A64;
+    color: #014909;
+    border: 2px solid #246D2C;
     margin: 0 0.25rem;
     padding: 0.75rem;
     border-radius: 50%;
@@ -286,7 +286,7 @@ main::before {
 }
 
 .nav .btn:hover {
-    background-color: #A68A64;
+    background-color: #2f8f3a9d;
 }
 
 /* RESPONSIVO */
@@ -395,10 +395,10 @@ main::before {
   border-radius: 12px;
   background: linear-gradient(
     to left,
-    hsl(34, 100%, 31%) 0%,
-    hsl(29, 100%, 26%) 8%,
-    hsl(32, 100%, 32%) 92%,
-    hsl(39, 100%, 16%) 100%
+    hsl(130, 100%, 21%) 0%,
+    hsl(138, 100%, 19%) 8%,
+    hsl(132, 98%, 20%) 92%,
+    hsl(133, 100%, 12%) 100%
   );
 }
 
@@ -409,7 +409,7 @@ main::before {
   border-radius: 12px;
   font-size: 1.1rem;
   color: white;
-  background: #A68A64;
+  background: #1A481F;
   will-change: transform;
   transform: translateY(-4px);
   transition:
