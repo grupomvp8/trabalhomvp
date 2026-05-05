@@ -21,18 +21,18 @@
 
   <!-- CONTEÚDO PRINCIPAL -->
   <header>
-    <h1>Assine o Studio Zen</h1>
+    <h1>A Capital Nacional do Montanhismo</h1>
     <p>Seu refúgio diário de tranquilidade começa agora.</p>
   </header>
 
   <main class="subscription-section">
     <section class="product-info">
-      <h2>O que você recebe com sua assinatura</h2>
+      <h2>O que você pode desfrutar</h2>
       <ul>
-        <li>✔ Sessões de respiração guiada</li><br>
-        <li>✔ Trilhas sonoras relaxantes</li><br>
-        <li>✔ Práticas para ansiedade, estresse e foco</li><br>
-        <li>✔ Acesso ilimitado 24/7</li><br>
+        <li>✔ Trilhas</li><br>
+        <li>✔ Locais perfeitos para aliviar ansiedade, estresse e melhorar o foco </li><br>
+        <li>✔ Fazer piquenique com vista para as montanhas</li><br>
+        <li>✔ Restaurante locais</li><br>
       </ul>
     </section>
 
@@ -73,6 +73,49 @@
       <a href="../user e adm/telalogin/login.html"><button type="submit" class="cta-button">💳 Confirmar Assinatura</button></a>
       </form>
     </section>
+    
+    <p> Como está hoje em Terê?</p>
+    <div id="clima">Carregando clima...</div>
+
+  <div class="weather-card">
+  <h2>🌿 Teresópolis</h2>
+  <div id="weather-info">
+    Carregando...
+  </div>
+</div>
+
+<script>
+fetch("https://api.open-meteo.com/v1/forecast?latitude=-22.4167&longitude=-42.9756&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,cloud_cover,wind_speed_10m&timezone=auto")
+  .then(res => res.json())
+  .then(data => {
+    const c = data.current;
+
+    let dica = "";
+
+    if (c.precipitation > 2) {
+      dica = "Evite trilhas hoje 🌧️";
+    } else if (c.cloud_cover < 30) {
+      dica = "Perfeito para trilhas 🌄";
+    } else {
+      dica = "Bom para passeios leves 🌿";
+    }
+
+    document.getElementById("weather-info").innerHTML = `
+      <div class="weather-temp">${c.temperature_2m}°C</div>
+      <div class="weather-details">
+        🤗 Sensação: ${c.apparent_temperature}°C <br>
+        💧 Umidade: ${c.relative_humidity_2m}% <br>
+        ☁️ Nuvens: ${c.cloud_cover}% <br>
+        💨 Vento: ${c.wind_speed_10m} km/h
+      </div>
+      <div class="weather-tip">${dica}</div>
+    `;
+  })
+  .catch(() => {
+    document.getElementById("weather-info").innerText = "Erro ao carregar clima";
+  });
+</script>
+
   </main>
 
   <footer>

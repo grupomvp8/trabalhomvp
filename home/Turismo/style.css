@@ -229,3 +229,37 @@ footer {
     font-size: 1em;
   }
 }
+
+.weather-card {
+  width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.weather-card h2 {
+  margin-bottom: 15px;
+}
+
+.weather-temp {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.weather-details {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.weather-tip {
+  margin-top: 15px;
+  font-size: 13px;
+  background: rgba(255,255,255,0.2);
+  padding: 8px;
+  border-radius: 10px;
+}

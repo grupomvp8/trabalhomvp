@@ -23,8 +23,6 @@ document.getElementById('form-assinatura').addEventListener('submit', function (
   } else {
     window.location.href = "../user e adm/sons-login/som.html";
   }
-
-  // Simula envio do formulário, salvar dados, etc.
-
 });
+
 
