@@ -17,7 +17,7 @@
 body {
   font-family: 'Georgia', serif;
   background-color: #f5f1ec;
-  color: #3d2e26;
+  color: #246D2C;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ body {
 .menu-button {
   font-size: 1.8em;
   background: none;
-  color: #3d2e26;
+  color: #246D2C;
   border: none;
   cursor: pointer;
 }
@@ -68,7 +68,7 @@ body {
 .menu-items a {
   padding: 12px 20px;
   text-decoration: none;
-  color: #3d2e26;
+  color: #246D2C;
   transition: background-color 0.3s ease;
   font-size: 1em;
 }
@@ -91,14 +91,14 @@ header h1 {
   font-family:'Morally Serif', serif;
   font-size: 4em;
   font-weight: normal;
-  color: #3d2e26;
+  color: #246D2C;
 }
 
 /* Subtítulo abaixo do título principal */
 header p {
   margin-top: 10px;
   font-size: 1.2em;
-  color: #6a5546;
+  color: #1A481F;
 }
 
 /* ========== ÁREA DO FORMULÁRIO ========== */
@@ -110,7 +110,7 @@ header p {
 }
 
 /* Estilo para caixas de conteúdo (informações e formulário) */
-.product-info, .refund-info, .form-section {
+.product-info, .form-section {
   background-color: #fffaf6;
   padding: 40px;
   border-radius: 12px;
@@ -120,12 +120,12 @@ header p {
 
 /* Estilo para títulos nas seções de inscrição */
 .subscription-section h2, h3 {
-  color: #4e3b2c;
+  color: #1A481F;
 }
 
 /* Cor de textos, parágrafos, listas e labels */
 .subscription-section p, ul, label {
-  color: #5c4c3d;
+  color: #1A481F;
 }
 
 /* ========== FORMULÁRIO ========== */
@@ -135,7 +135,7 @@ form label {
   display: block;
   margin-bottom: 6px;
   font-weight: bold;
-  color: #4e3b2c;
+  color: #1A481F;
 }
 
 /* Campos de texto e seleção com preenchimento, borda arredondada e cor suave */
@@ -148,7 +148,7 @@ form select {
   border: 1px solid #ccc;
   background-color: #fffaf3;
   font-size: 1em;
-  color: #3d2e26;
+  color: #1A481F;
 }
 
 /* Destaque dos campos quando estão em foco */
@@ -162,7 +162,7 @@ form select:focus {
 
 /* Botão de ação principal com fundo escuro e fonte clara */
 .cta-button {
-  background-color: #5b3e2b;
+  background-color: #1A481F;
   color: #fffaf3;
   border: none;
   padding: 14px 28px;
@@ -175,7 +175,7 @@ form select:focus {
 /* Efeito de escala e cor ao passar o mouse */
 .cta-button:hover {
   transform: scale(1.05);
-  background-color: #6d4c35;
+  background-color: #2aa038;
 }
 
 /* ========== BOTÃO FIXO "ASSINE" DIREITA ========== */
